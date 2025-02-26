@@ -1,0 +1,43 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Memory Game</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body>
+    <div id="intro-screen">
+        <h1>The Memory Challenge</h1>
+
+        <label>Select Mode:</label>
+        <select id="mode-selector">
+            <option value="single">1 Player</option>
+            <option value="multi">2 Players</option>
+        </select>
+        <div id="players-container">
+            <input type="text" id="player-one" placeholder="Player 1 Name">
+            <input type="text" id="player-two" placeholder="Player 2 Name">
+        </div>
+        <div class="colortype">
+            <input type="color" id="theme-color" value="#ff5733">
+            <button id="begin-game">Start Game</button>
+        </div>
+    </div>
+    
+    <div id="play-area" style="display: none;">
+        <h2> <span id="active-player"></span></h2>
+        <p>Player 1: <span id="points-one">0</span> | Player 2: <span id="points-two">0</span></p>
+        <p>Time Left: <span id="countdown">60</span> seconds</p>
+
+        <div id="board-grid"></div>
+        <button id="info-btn">Help</button>
+        <button id="reset-btn">Restart Game</button>
+        <button id="main-menu">Home</button>
+
+        <div id="info-box" style="display: none;">
+            <p>Take turns flipping the cards and trying your luck, if both the flipped cards match, Gotcha, you won!</p>
+        </div>
+    </div>
+    <script src="js/app.js"></script>
+</body>
+</html>

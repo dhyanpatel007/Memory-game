@@ -1,0 +1,133 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    background: url("images/displayimage2.jpg") no-repeat center center / cover;
+    color: white;
+}
+
+#intro-screen {
+    margin-top: 30px;
+}
+
+#game-settings {
+    margin: 10px auto;
+}
+
+#players-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+#theme-color {
+    margin-top: 15px;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-color: rgb( 255, 87, 51);
+}
+
+.colortype {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    flex-direction: column;
+    align-items: center;
+}
+
+#player-two {
+    display: none;
+}
+
+input[type="text"], button {
+    padding: 10px;
+    margin-top: 20px;
+}
+
+button {
+    background-color: brown;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: transform 0.5s ease-in-out;
+}
+button:hover {
+    background-color: white;
+    color: black;
+}
+#play-area {
+    margin-top: 20px;
+}
+#score {
+    font-weight: bold;
+    font-size: 20px;
+}
+#board-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    gap: 10px;
+    justify-content: center;
+    margin: 20px auto;
+}
+
+.card {
+    width: 100px;
+    height: 100px;
+    background-color: var(--theme-color, #ff5733); /* Use the theme color or a default one */
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.5s;
+}
+
+.card.flipped {
+    background-color: white;
+    transform: rotateY(180deg);
+    color: black;
+}
+
+#info-box {
+    background-color: black;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+#main-menu {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    margin-top: 10px;
+}
+#main-menu:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 500px) {
+    #board-grid {
+        grid-template-columns: repeat(3, 90px);
+    }
+    .card {
+        width: 90px;
+        height: 90px;
+    }
+    #players-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
